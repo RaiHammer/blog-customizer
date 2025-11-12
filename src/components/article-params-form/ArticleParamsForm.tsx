@@ -4,7 +4,7 @@ import { useState, useRef } from 'react';
 import { Separator } from 'src/ui/separator';
 import { Select } from 'src/ui/select';
 import { RadioGroup } from 'src/ui/radio-group';
-
+import { Text } from 'src/ui/text';
 import clsx from 'clsx';
 import { useOutsideClickClose } from 'src/ui/select/hooks/useOutsideClickClose';
 
@@ -69,6 +69,10 @@ export const ArticleParamsForm = ({
 						e.preventDefault();
 						handleApply();
 					}}>
+					<Text as={'h2'} size={31} weight={800} uppercase>
+						Задайте параметры
+					</Text>
+
 					<Select
 						options={fontFamilyOptions as OptionType[]}
 						selected={draftSettings.fontFamilyOption}
